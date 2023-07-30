@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div style=" width: 100%; height: 100%;">
+  <div style=" width: 80%; height:100%; margin-left: auto; margin-right: auto;">
+    <div style="margin-top: 50px;">
+      <h2 style="text-align: center; font-size: 22px; font-family: serif; "> <u>All Product</u> </h2>
+    </div>
+    <ul *ngFor="let product of  allProduct" >
+        <li id="{{product.id}}" style=" list-style-type: none; float: left; margin: 10px; margin-left: 35px;">
+          <div class="liDivClass">
+            <img *ngIf="product.images && product.images.length > 0" src="./assets/images/{{product.images[0].imageUrl}}"  alt="deneme" style="width: 100%; height:250px; border-radius: 8px; " >
+            <div style="width: 100%; height:20px; background-color: black;" >
+              <p style="font-family: serif; background-color: white; color: rgb(0, 0, 0); font-size: 10px; float: left; text-align: left; padding-left: 10px;">{{product.name}}</p>
+              <p style="font-family: serif; background-color: white; color: rgb(0, 0, 0); font-size: 10px; text-align: right; padding-right: 3px;">{{product.price}} TL</p>
+            </div>
+          </div>
+        </li>
+    </ul>
+  </div>
+</div>
+

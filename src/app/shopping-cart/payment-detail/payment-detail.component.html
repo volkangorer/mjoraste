@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<div *ngIf="paymentId==='1'" class="component">
+  <mat-stepper linear #stepper>
+    <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+      <form [formGroup]="firstFormGroup" (ngSubmit)="sendCardInfo(firstFormGroup.value)">
+        <ng-template matStepLabel>Fill out your credit-card information</ng-template>
+        <mat-form-field>
+          <input matInput formControlName="cardNumber" placeholder="Card Number">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="cardOwner" placeholder="Card Owner">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="mm" placeholder="MM" maxlength="2">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="vv" placeholder="YY" maxlength="2">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="cvv" placeholder="CVV" maxlength="3">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+      <form [formGroup]="secondFormGroup" (ngSubmit)="sendAddressInfo()">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+          <input matInput formControlName="city"  placeholder="City" required>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput formControlName="town"  placeholder="Town" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="fullAddress" placeholder="Ex. 1 Main St, New York, NY" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-stepper>
+
+</div>
+
+<div *ngIf="paymentId==='2'" class="component">
+  <mat-stepper linear #stepper>
+    <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+      <form [formGroup]="secondFormGroup" (ngSubmit)="sendAddressInfo()">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+          <input matInput formControlName="city"  placeholder="City" required>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput formControlName="town"  placeholder="Town" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="fullAddress" placeholder="Ex. 1 Main St, New York, NY" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-stepper>
+
+</div>
+
+
+

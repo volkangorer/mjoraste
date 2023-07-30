@@ -1,0 +1,21 @@
+.button{
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+
+
+}
+
+.button:focus{
+  outline: none;
+}
+
+.button:hover{
+  background-color: #f3f3f3;
+}
+

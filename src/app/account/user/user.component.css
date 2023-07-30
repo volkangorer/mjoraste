@@ -1,0 +1,18 @@
+.button2{
+  background-color: white;
+  border: none;
+  color:rgb(71, 71, 71);
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+
+
+}
+
+.button2:focus{
+  outline: none;
+}
+
+.button2:hover{
+  background-color: #f3f3f3;
+}

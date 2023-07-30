@@ -1,0 +1,157 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    gap: 30px;
+  }
+}
+.spacer{
+  display: block;
+  height: 50px;
+}
+.spacer-two{
+  height: 30px;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  gap: 80px;
+}
+.content-one{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.categories{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (max-width: 425px) {
+  .categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content {
+    gap: 30px;
+  }
+}
+.categories-section{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+
+  transition: width 0.3s ease-in;
+}
+.categories-section:hover {
+  width: 21%;
+  border: 1px solid #f3f3f3;
+}
+
+.content-item-title{
+  font-size: 25px;
+  font-family: serif;
+  border-bottom: 1px solid;
+}
+@media screen and (max-width: 768px) {
+  .content-item-title {
+    font-size: 20px;
+  }
+  .content {
+    gap: 15px;
+  }
+}
+.categories-button{
+  background-color: white;
+  border: 0;
+}
+img{
+  width: 100%;
+}
+@media screen and (max-width: 425px) {
+  img{
+    display: none;
+  }
+}
+.categories-title{
+  font-family: serif;
+  font-size: 23px;
+  margin-top: 0.5rem
+}
+@media screen and (max-width: 425px) {
+  .categories-title {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .categories-title {
+    font-size: 17px;
+  }
+}
+.categories-price{
+  text-align: center;
+  margin: 0;
+  font-size: 15px;
+  font-family: serif;
+}
+.content-two{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 425px) {
+  .content-two {
+    display: none;
+  }
+}
+.top-product-title{
+  font-size: 25px;
+  font-family: serif;
+  border-bottom: 1px solid;
+}
+@media screen and (max-width: 768px) {
+  .top-product-title {
+    font-size: 20px;
+  }
+}
+.content-three{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+@media screen and (max-width: 425px) {
+  .content-three {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content-three {
+    width: 100%;
+  }
+}
+.aboutUsTitle{
+  font-family: serif;
+  font-size: 20px;
+  border-bottom: 1px solid;
+}
+.aboutUsText{
+  text-align: center;
+  line-height: 2rem;
+  font-family: serif;
+  font-size: 18px;
+}

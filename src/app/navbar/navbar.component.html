@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="header">
+    <div class="title">
+      <a routerLink="" style="color: black; text-decoration: none;">
+        <h1 class="title-text">MJORASTE</h1>
+      </a>
+    </div>
+    <div class="search">
+      <input [(ngModel)]="searchInput" class="search-input" placeholder="Enter the product you are looking for">
+        <mat-icon (click)="search()">search</mat-icon>
+    </div>
+    <div class="account-navigater-wrapper">
+      <button mat-button style="color: black; background-color: #fff; margin-right: 0.5rem" class="shoppingCard-button" (click)="fromHomeToShoppingCard()">
+        <div matBadge="{{component.cartItemSize}}"  matBadgeColor="warn" matBadgeOverlap="false">SHOPPING CART</div>
+      </button>
+      <button *ngIf="key=='account'" mat-button style="color: black; background-color: #fff" class="account-button" (click)="fromHomeToAccount()">
+        ACCOUNT
+      </button>
+      <button *ngIf="key=='login'" mat-button style="color: black; background-color: #fff" class="account-button" (click)="fromHomeToLogin()">
+        LOG IN
+      </button>
+    </div>
+  </div>
+</div>

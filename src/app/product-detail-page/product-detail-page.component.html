@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="row">
+    <div class="carousel">
+      <app-carousel [slides]="slides"></app-carousel>
+    </div>
+    <div class="image-info">
+      <div class="product-info">
+        <p class="product-info-title">{{name}}</p>
+        <p class="product-info-price">{{price}}</p>
+        <p class="product-info-description">{{description}}</p>
+        <p class="product-info-description">REMAIN: {{remain}}</p>
+        <div class="product-increase">
+          <button class="increase-btn" (click)="reduceProductAmount()">-</button>
+          <input class="amount-input" type="text" value="{{numberOfProduct}}">
+          <button class="increase-btn" (click)="increaseProductAmount()">+</button>
+        </div>
+      </div>
+      <button mat-button (click)="addToShoppingCart()" >Add To Shopping Cart</button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,28 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.payment-title{
+  font-family: serif;
+  font-size: 25px;
+  margin-bottom: 3rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
+.button {
+  font-size: 15px;
+  font-family: serif;
+  border: 1px solid;
+  width: 140px;
+}
+.button:hover{
+  background-color: black;
+  color: white;
+}
+.btn-creditCart{
+  margin-right: 3rem;
+}

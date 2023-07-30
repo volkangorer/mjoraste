@@ -1,0 +1,48 @@
+.inputArea{
+  font-size: 11px;
+  color: rgb(0, 0, 0);
+  width: 53%;
+   padding: 5px;
+   margin: 5px;
+   border:none;
+   border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.submitButton{
+  font-size: 11px;
+  width: 55%;
+  height: 15%;
+  margin-top: 15px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 2px;
+  margin-top: 30px;
+}
+
+.registerButton{
+  width: 55%;
+  height: 15%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(156, 154, 154);
+  border: 1px solid rgb(87, 86, 86);
+
+}
+
+.title{
+  font-weight: bold;
+
+  font-size: 13px;
+}
+
+
+.contentMargin{
+  text-align: center;
+  width: 50%;
+  height:250px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 120px;
+}

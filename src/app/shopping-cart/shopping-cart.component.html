@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="shopping-cart-section">
+      <div style="  width: 100%; height: 60px; border-bottom: 1px solid black;  display: flex;">
+        <button (click)="goToShoppingCart()" class="button">SHOPPING CART</button>
+      </div>
+  </div>
+  <div class="card" *ngIf="cartItemsList.length>0" >
+    <mat-card *ngFor="let cartItem of cartItemsList">
+      <div class="select-image">
+        <img src="./assets/images/{{cartItem.images[0].imageUrl}}" alt="">
+      </div>
+      <div class="shoppingcart-content">
+        <mat-card-header>
+          <mat-card-title>{{cartItem.name}}</mat-card-title>
+          <mat-card-subtitle>{{cartItem.name}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="product-price">{{cartItem.quantity}}  x {{cartItem.price}}</p>
+          <button class="product-delete-button"  (click)="deleteFromStorage(cartItem.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-content>
+      </div>
+    </mat-card>
+
+    <div>
+      <p>Toplam fiyat: {{totalPrice}} </p>
+    </div>
+
+
+    <button (click)="openPaymentDialog()" mat-button class="proceedCheckoutButton">Proceed Checkout</button>
+
+  </div>
+
+
+</div>

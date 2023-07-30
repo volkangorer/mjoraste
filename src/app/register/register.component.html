@@ -1,0 +1,35 @@
+<div style="width: 100%; height: 100%; position: fixed;  ">
+  <form #frm= "ngForm" (ngSubmit)="onRegister(frm.value)">
+    <div class="title">
+      <p style="font-weight: bold; margin-left: 1%;">PERSONEL DETAILS</p>
+    </div>
+    <div class="contentMargin">
+      <div style=" width: 50%; height: 100%; float: left;">
+        <div style="margin-top: 20px;">
+          <input type="text" id="name" name="name" ngModel class="inputArea" placeholder="NAME"  />
+        </div>
+        <div style="margin-top: 20px;">
+          <input type="email" id="email" name="email" ngModel class="inputArea" placeholder="E-MAIL"  />
+        </div>
+        <div style="margin-top: 20px;">
+          <input type="password" id="password" name="password" ngModel class="inputArea" placeholder="PASSWORD"  />
+        </div>
+      </div>
+      <div style="width: 50%; height: 100%; float: left;">
+        <div style="margin-top: 20px;">
+          <input type="text" id="surName" name="surName" ngModel class="inputArea" placeholder="SURNAME"  />
+        </div>
+        <div style="margin-top: 20px;">
+          <input type="text" id="phoneNumber" name="phoneNumber" ngModel class="inputArea" placeholder="PHONE NUMBER"  />
+        </div>
+        <div style="margin-top: 20px;">
+          <input type="password" id="passwordAgain" name="passwordAgain" ngModel class="inputArea" placeholder="REPEAT PASSWORD"  />
+        </div>
+      </div>
+  </div>
+  <div class="buttonDiv">
+    <button type="submit" [disabled]="!frm.form.valid" class="registerButton">CREATE ACCOUNT</button>
+  </div>
+  </form>
+
+</div>

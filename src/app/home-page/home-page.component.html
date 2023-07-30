@@ -1,0 +1,85 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="spacer"></div>
+  <div class="content">
+    <div class="content-one">
+      <h1 class="content-item-title">CATEGORIES</h1>
+      <div class="categories">
+        <div class="categories-section" *ngFor="let category of categoriesList">
+          <button class="categories-button" (click)=fromCategoriesSectiontoProduct(category.id)>
+            <img src="./assets/category_images/{{category.imageUrl}}" alt="">
+            <p class="categories-title">{{category.name}}</p>
+          </button>
+        </div>
+        <!-- <div class="categories-section">
+          <button class="categories-button" (click)=fromCategoriesSectiontoProduct(4)>
+            <img src="./assets/mjoraste-img-3.jpg" alt="">
+            <p class="categories-title">T-SHIRT</p>
+          </button>
+        </div>
+        <div class="categories-section">
+          <button class="categories-button" (click)=fromCategoriesSectiontoProduct(3)>
+            <img src="./assets/mjoraste-img-2.jpg" alt="">
+            <p class="categories-title">BLAZER</p>
+          </button>
+        </div>
+        <div class="categories-section">
+          <button class="categories-button" (click)=fromCategoriesSectiontoProduct(1)>
+            <img src="./assets/mjoraste-img-4.jpg" alt="">
+            <p class="categories-title">SHOES</p>
+          </button>
+        </div> -->
+      </div>
+    </div>
+    <div class="spacer-two"></div>
+    <div class="content-two">
+      <h1 class="top-product-title">TOP PRODUCT</h1>
+      <div class="categories">
+        <div class="categories-section" *ngFor="let product of productList">
+          <button class="categories-button" (click)="fromCategoriesSectiontoProductDetail(product.id)">
+            <img src="../../assets/images/{{product.images[0].imageUrl}}" alt="">
+            <p class="categories-title">{{product.name}}</p>
+          </button>
+        </div>
+        <!--<div class="categories-section">
+          <button class="categories-button" (click)=fromCategoriesSectiontoProductDetail(2)>
+            <img src="./assets/mjoraste-img-4.jpg" alt="">
+            <p class="categories-title">Siyah Elbise</p>
+          </button>
+        </div>
+        <div class="categories-section">
+          <button class="categories-button" (click)=fromCategoriesSectiontoProductDetail(3) >
+            <img src="./assets/mjoraste-img-3.jpg" alt="">
+            <p class="categories-title">T-SHIRT</p>
+          </button>
+        </div>
+        <div class="categories-section">
+          <button class="categories-button" (click)=fromCategoriesSectiontoProductDetail(4) >
+            <img src="./assets/mjoraste-img-2.jpg" alt="">
+            <p class="categories-title">BLAZER</p>
+          </button>
+        </div>
+        <div class="categories-section">
+          <button class="categories-button" (click)=fromCategoriesSectiontoProductDetail(5) >
+            <img src="./assets/mjoraste-img-1.jpg" alt="">
+            <p class="categories-title">SHOES</p>
+          </button>
+        </div>
+        <div class="categories-section">
+          <button class="categories-button" (click)=fromCategoriesSectiontoProductDetail(6) >
+            <img src="./assets/mjoraste-img-2.jpg" alt="">
+            <p class="categories-title">SHOES</p>
+          </button>
+        </div>-->
+      </div>
+  </div>
+    <div class="content-three">
+      <h1 class="aboutUsTitle">ABOUT US</h1>
+      <p class="aboutUsText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci autem consequatur dignissimos dolorum enim error, expedita fugit laborum minima minus modi mollitia placeat, quod, rem ut vel vero voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci autem consequatur dignissimos dolorum enim error, expedita fugit laborum minima minus modi mollitia placeat, quod, rem ut vel vero voluptatibus?</p>
+    </div>
+    <div class="footer-text">
+      <p>CopyRight©2023</p>
+    </div>
+</div>
+</div>
+<router-outlet></router-outlet>
